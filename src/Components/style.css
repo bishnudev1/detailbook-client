@@ -1,0 +1,629 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.home-container{
+    height: calc(100vh - (60px + 200px));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-sub-container{
+    display: grid;
+    padding-block: 50px;
+    padding-inline: 200px;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.first-section{
+    width: 65%;
+}
+
+.home-img{
+    height: 350px;
+    width: 350px;
+    border: 7px solid slateblue;
+    border-radius: 100%;
+}
+.home-btn{
+    padding: 10px;
+    background-color: slateblue;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.home-head-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.home-sub-text{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-bottom: 10px;
+    font-size: 27px;
+}
+.home-desc-text{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.foot-img{
+    height: 100px;
+    width: 100px;
+}
+.footer-head-text{
+    font-size: 17px;
+    color: #999;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    background-color: white;
+}
+.sub-footer-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.first-foot{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.second-foot{
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+.foot-link{
+    color: slateblue;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 13px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.foot-ul-first,.foot-ul-second,.foot-ul-third{
+    list-style-type: disc;
+}
+.copyright-text{
+    font-size: 15px;
+    text-align: center;
+    color: slateblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.register-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-img-container{
+    background-color: slateblue;
+    height: 510px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid slateblue;
+    box-shadow: 0 0 10px 15px blueviolet;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+.form-img{
+    height: 350px;
+    width: 350px;
+}
+
+.sub-register-container{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid slateblue;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: space-between;
+    width: 300px;
+    padding: 20px;
+    background-color: slateblue;
+}
+
+.sub-login-container{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid slateblue;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: space-evenly;
+    width: 300px;
+    height: 380px;
+    padding: 20px;
+    background-color: slateblue;
+}
+
+.form-head-text{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+.form-btn{
+    padding: 5px;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 10px;
+    color: slateblue;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.form-label{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    padding-bottom: 2px;
+}
+.form-input{
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 3px;
+}
+.form-input[type='text']{
+    padding: 5px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.form-input[type='email']{
+    padding: 5px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.tnc-text{
+    color:white;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 2px;
+}
+
+.form-input::placeholder{
+    font-size: 12px;
+}
+.already-have{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.already-have-text{
+    color: white;
+    font-size: 15px;
+    font-family:'Times New Roman', Times, serif;
+}
+.already-have-btn{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.forget-pass{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.forget-pass-text{
+    font-size: 13px;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.forget-pass-btn{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.welcome-login-text{
+    color: white;
+    text-align: center;
+}
+
+.about-container{
+    height: calc(100vh - (60px + 200px));
+    padding-inline: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub-about-container{
+    height: 350px;
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid grey;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px gray;
+}
+.profile-img{
+    height: 160px;
+    width: 160px;
+}
+.mid-desc-about-text{
+    text-align: center;
+}
+.head-img-about{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.name-about-desc-text{
+    font-size: 20px;
+}
+.about-contact-socials{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.mid-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.edit-profile-btn{
+    padding-block: 3px;
+    margin-inline: 10px;
+    padding-inline: 5px;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: slateblue;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.not-logged-in-about-btn{
+    padding-block: 8px;
+    padding-inline: 13px;
+    border: 1px solid grey;
+    background-color: slateblue;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.not-logged-in-about-text{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.main-explore-container{
+    height: calc(100vh - (60px + 200px));
+    display: flex;
+    justify-content: center;
+}
+.dev-card{
+    width: 600px;
+    height: 30px;
+    margin-block: 30px;
+
+}
+table, th, td {
+    border: 2px solid white;
+    border-collapse: collapse;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+th, td {
+    background-color: slateblue;
+}
+th{
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.table-link{
+    padding: 4px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.stories-container{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.story-card{
+    margin-block: 10px;
+    width: 55%;
+    border: 1px solid white;
+    box-shadow: 0 0 7px 1px gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+.card-first{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.second-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 7px;
+}
+.story-title{
+    padding-bottom: 7px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.story-desc{
+    padding-bottom: 7px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(23, 18, 18);
+}
+.story-desc::first-letter{
+    font-size: 25px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.story-date{
+    color: slateblue;
+    font-weight: bold;
+}
+.story-user{
+    color: slateblue;
+    font-weight: bold;
+}
+.post-container{
+    height: calc(100vh - (60px + 200px));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Post-Story{
+    height: 400px;
+    width: 300px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: 1px solid skyblue;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px skyblue;
+}
+.post-stories-input{
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rosybrown;
+}
+.post-story-btn{
+    padding-block: 6px;
+    padding-inline: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color: slateblue;
+}
+.post-stories-label{
+    color: slateblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.post-stories-head{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.update-profile{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-update-profile{
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 350px;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+.save-profile-btn{
+    padding: 5px;
+    outline: none;
+    border: 1px solid slateblue;
+    border-radius: 5px;
+    background: transparent;
+    color: slateblue;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+.edit-profile-labels{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: slateblue;
+}
+.edit-profile-inputs{
+    padding: 5px;
+    outline: none;
+    border: 1px solid slateblue;
+    border-radius: 5px;
+}
+
+.edit-profile-inputs:placeholder-shown{
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+    .toggle-menu{
+        display: block;
+    }
+    .head-text-container{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .navbar{
+        height: 120px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .navbar-ul{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .ac-btn.navbar{
+        display: none;
+    }
+    .navbar-link{
+        font-size: 13px;
+        padding: 10px;
+    }
+    .story-card{
+        width: 100%;
+    }
+    .sub-footer-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .copyright-foot{
+        margin-top: 12px;
+    }
+    .sub-about-container{
+        box-shadow: none;
+        border: none;
+        width: 100%;
+    }
+    .profile-img{
+        height: 110px;
+        width: 110px;
+    }
+    .name-about-desc-text{
+        font-size: 14px;
+    }
+    .email-about-desc-text,.age-about-desc-text,.work-about-desc-text{
+        font-size: 13px;
+    }
+    .mid-desc-about-text{
+        font-size: 14px;
+    }
+    .home-container{
+        height: calc(100vh - (60px + 180px));
+    }
+    .home-sub-container{
+        margin-inline: 24px;
+        margin-bottom: 24px;
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 10px;
+    }
+    .first-section{
+        width: 100%;
+        text-align: center;
+        padding-top: 15px;
+    }
+    .home-img{
+        height: 200px;
+        width: 200px;
+    }
+    .about-container{
+        height: calc(100vh - (60px + 200px));
+    }
+    .main-explore-container{
+        height: calc(100vh - (60px + 200px));
+    }
+    .dev-card{
+        margin: 40px;
+        width: 100%;
+    }
+    th{
+        font-size: 14px;
+    }
+    table,th,td{
+        padding-block: 7px;
+        padding-inline: 10px;
+    }
+    td{
+        font-size: 13px;
+    }
+    .post-container{
+        height: calc(100vh - (60px + 200px));
+    }
+    .sub-post-container{
+        margin: 40px;
+    }
+    .register-container{
+        height: 100%;
+        flex-direction: column;
+    }
+    .sub-register-container,.sub-login-container{    
+        margin: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    .form-img-container{
+        height: 200px;
+        width: 100%;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .tnc-text{
+        margin-block: 6px;
+    }
+    .already-have{
+        margin-block: 6px;
+    }
+    .form-input,.form-label{
+        margin-bottom: 3px;
+    }
+    .forget-pass{
+        margin-block: 9px;
+    }
+    .edit-profile-btn{
+        font-size: 12px;
+        margin-inline: 0;
+    }
+    .sub-about-container{
+        width: 100%;
+    }
+}
