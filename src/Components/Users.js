@@ -14,10 +14,29 @@ const Users = () => {
         getUserData();
     }, [])
 
-    const deleteAccount = (id) => {
-        Axios.delete(`/delete-account/${id}`);
-        alert('Your account has been deleted');
-        navigate('/Logout');
+    const deleteAccount = async (id) => {
+
+        let pwd = prompt("Enter your account password...", "eg. 12345");
+
+        const resp = await fetch(`/delete-account/${id}`,{
+            method: 'DELETE',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify({
+                pwd
+            })
+        });
+
+        const data = await resp.json();
+
+        if (resp.status === 422) {
+            alert('Sorry wrong password');
+        }
+        else if(resp.status === 201){
+            alert('Your account has been deleted');
+            navigate('/Logout');
+        }
     }
 
     const getUsers = async () => {
@@ -74,8 +93,8 @@ const Users = () => {
                                     {
                                         item._id === me ? (
                                             <td><button onClick={() => deleteAccount(item._id)} className='table-link' >Delete</button></td>
-                                        ):
-                                        null
+                                        ) :
+                                            null
                                     }
                                 </tr>
                             </tbody>
